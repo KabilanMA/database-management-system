@@ -85,9 +85,23 @@ CREATE TABLE student(
 ```SQL
 SELECT name, dept_name, tot_cred
 FROM student
-WHERE student.ID = '23121'
+WHERE student.ID = '23121';
 ```
+<br>
+Application programs generally access the databases through either by
+  - Language extensions to allow embedded SQL
+  - Application program interface(e.g., ODBC/JDBC) which allow SQL queries to be sent to a database.
+<br>
 
+## Database Design
+
+Database Design is a collection of processes that facilitate the designing, development, implementation, and maintenance of enterprise data management systems. Properly designed database are easy to maintain, improves data consistency, and are cost-effective in terms of disk storage space. There are two levels of database design;
+  - Physical Design
+    - Physical database design is the process of transforming a data model into the physical data structure of a particular database management system (DBMS). Normally, Physical Design is accomplished in multiple steps, which include expanding a business model into a fully attributed model (FAM) and then transforming the fully attributed model(logical design) into a physical design model.
+  - Logical Design
+    - Deciding on the database schema, where database design requires that we find a good collection of relation schemas using several steps such as;
+      - Entity Relationship Model 
+      - Normalization Theory etc.
 
 [^1]:Data Redundancy and Inconsistency: The file system will consist of multiple file formats which may be incompatible with different operating systems and the files may have duplicate data which needs to be cleared out regularly, even after a single update in the file. When the system fails when writing to the file system, it may leave the whole file in an inconsistent state.
 
