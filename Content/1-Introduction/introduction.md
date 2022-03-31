@@ -28,7 +28,7 @@ This is very close to the user, where the user can query and see different data 
 # Insert the Hierarchy Image
 
 ### Schema
-This is analogous to the variable data type information in programming languages, thus representing the logical structure of the database. It comprises of Physical and Logical schema each representing database design at the physical and logical level respectively.
+This is analogous to the variable data type information in programming languages, thus representing the logical structure of the database. It comprises of Physical and Logical schema each representing database design at the physical and logical level respectively.<br>
 Application depends on the logical schema, therefore database system provide the ability to modify the physical schema without changing the logical schema. In general, the interface between the various levels and components should be wll defined so that changes in some parts do not seriously influence others.
 
 ### Instance
@@ -39,14 +39,13 @@ Data models are collection tools for describing Data, Data Relationships, Data S
 
 ## Relational Model
 
-Edgar Frank "Ted" Codd (19 August 1923 – 18 April 2003) was an English computer scientist who, while working for IBM, invented the relational model for database management, the theoretical basis for relational databases and relational database management systems[[ref](https://en.wikipedia.org/wiki/Edgar_F._Codd)].
+Edgar Frank "Ted" Codd (19 August 1923 – 18 April 2003) was an English computer scientist who, while working for IBM, invented the relational model for database management, the theoretical basis for relational databases and relational database management systems[[ref](https://en.wikipedia.org/wiki/Edgar_F._Codd)].<br>
 A relational database system provides a connection between different entities (logical schema) and this connection between each entity is known as a relation. The relational data model is the pathway to database management and therefore latter part of this document will elucidate the database system considering the relational model.
 
-## Data Manipulation Lnaguage (DML)
+## Data Manipulation Language (DML)
 
-DML also known as query language is used for accessing and manipulating the data organized by the appropriate data model. There are two classes of DML languages, Procedural and Declarative.
-<br>
-A procedural language is where the user specifies what data is required and also how to get those data. Due to its complexity for the application developer and the undependability of programmers' code, this is not widely used in high-level application development. Some examples of declarative aka non-procedural languages are;<br>
+DML also known as query language is used for accessing and manipulating the data organized by the appropriate data model. There are two classes of DML languages, Procedural and Declarative.<br><br>
+A **procedural language** is where the user specifies what data is required and also how to get those data. Due to its complexity for the application developer and the undependability of programmers' code, this is not widely used in high-level application development. Some examples of declarative aka non-procedural languages are;<br>
 <ul>
   <li>FORTRAN</li>
   <li>COBOL</li>
@@ -55,7 +54,7 @@ A procedural language is where the user specifies what data is required and also
   <li>C</li>
   <li>Pascal</li>
 </ul>
-In Declarative(non-procedural) languages user specifies what data is required without specifying how to get those data. Therefore it reduces some complexity for the application developers. Some examples of declarative query languages are;
+In **Declarative(non-procedural) languages** user specifies what data is required without specifying how to get those data. Therefore it reduces some complexity for the application developers. Some examples of declarative query languages are;
 <ul>
   <li>SQL</li>
   <li>PROLOG</li>
@@ -64,8 +63,30 @@ In Declarative(non-procedural) languages user specifies what data is required wi
 <br>
 Check <a href="https://www.geeksforgeeks.org/difference-between-procedural-and-non-procedural-language/">here</a> the difference between procedural and declarative query languages.
 <br>
-SQL (Structure Query Language) is the most widely used query language.
 
+## Data Definition Language (DDL)
+
+A data definition language (DDL) is a computer language used to create and modify the structure of database objects in a database.<br>
+DDL compiler generates a set of tables templates stored in a data dictionary, which contains metadata (i.e., data about data) that is database schema, integrity constraints, authorization, etc.<br>
+**SQL** is the most widely used non-procedural (declarative) data definition and data manipulation language.<br><br>
+### SQL Example code as DDL
+```SQL
+CREATE TABLE student(
+  ID VARCHAR(5),
+  name VARCHAR(20) NOT NULL, 
+  dept_name VARCHAR(20),
+  tot_cred NUMERIC(3,0) CHECK (tot_cred >= 0),
+  PRIMARY KEY (ID),
+  FOREIGN KEY (dept_name) REFERENCES department(dept_name)
+    ON DELETE SET NULL
+);
+```
+### SQL Example code as DML
+```SQL
+SELECT name, dept_name, tot_cred
+FROM student
+WHERE student.ID = '23121'
+```
 
 
 [^1]:Data Redundancy and Inconsistency: The file system will consist of multiple file formats which may be incompatible with different operating systems and the files may have duplicate data which needs to be cleared out regularly, even after a single update in the file. When the system fails when writing to the file system, it may leave the whole file in an inconsistent state.
