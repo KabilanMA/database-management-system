@@ -25,7 +25,7 @@ This discribes data stored in database, and the relationships among the data and
 ##### View Level
 This is very close to the user, where the user can query and see different data in different views, therefore this stays on the top of the hierarchy.
 
-# Insert the Hierarchy Image
+<img src='./Images/abstraction-heirarchy.JPG' alt = 'Hierarchical View of Abstraction' width='400px'><br>
 
 ### Schema
 This is analogous to the variable data type information in programming languages, thus representing the logical structure of the database. It comprises of Physical and Logical schema each representing database design at the physical and logical level respectively.<br>
