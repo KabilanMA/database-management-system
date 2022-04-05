@@ -76,6 +76,10 @@ A **super key** of an entity set is a set of one or more attributes whose values
 A **candidate key** of an entity set is a minimal super key
 - Eg: consider instructor table
   - ID
+
+https://user-images.githubusercontent.com/84805141/161683285-441db2aa-9472-4f72-94d7-1417a7c150ea.mp4
+
+
 <br>
 Although several candidate keys may exist, one of the candidate keys is selected to be the **primary key**
 
