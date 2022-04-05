@@ -83,12 +83,63 @@ Although several candidate keys may exist, one of the candidate keys is selected
 #### Keys for relationship sets
 Consider many-to-many relationship set takes between instructor and department, here (ID, dept_name) is the super key. It is also a candidate key and the primary key
 
-## ER Diagram
+## ER Model
+
+An ER model which stands for Entity-Relationship model is describes the interrelation between different entities of the domain of interest with some relation among them. ER model is used to describe the database design of a larger business model visually using several tools and different model types.
+
+First, let's learn about basic ER model design components to better understand the concepts then we will be using crow's foot notation. 
+
+### Basic ER Diagram
+
+<img src='./Images/ER-diagram-1.png' alt = 'instructor-student ER' width='400px'><br>
+
+- Rectangles represent entity sets.
+- Attributes listed inside entiry rectangle.
+- Underline indicates primary key attributes.
+- Diamond represents relationship sets.
+
+There are more constraints that we will see in different conditions.<br>
+
+#### Relationship Set With Attribute
+
+Consider the above example of the instructor and student entity relationship. In case we need to store the data of when an instructor and student engage in the advisor relation, we can't store them in neither instructor entity set nor in the student entity set, because of the cardinality constraints (one instructor can be in the advisor relation with more than one student and vise versa) and other factors. Therefore, relation set, **advisor** should maintain an attribute, **date**.
+
+<img src='./Images/ER-relation-attribute.jpg' alt = 'Relationship set with attribute' width='400px'><br>
+
+### Complex Attributes
+There are few complex attributes of an entity set which needs to be avoided when designing the ER model.
+<br>
+<img src='./Images/ER-complex-attribute.jpg' alt = 'Complex Attributes of instructor entity' width='500px'><br>
+
+#### Composite Attribute
+Composite attributes are the non-atomic attributes where each component represents a different meaning alone. Therefore these composite attributes can be flattened into several individual component attributes.
+
+#### Multivalued Attribute
+When more than one value can be stored in an attribute then it is called a multivalued attribute. It is not advisable to store multiple values in one attribute, because it will make it hard to query and insert data into the database schema. What we do as a solution is to create a separate schema containing the attributes representing the initial schema (primary key - A) and an attribute(B) for multivalued attribute, where these combined attribute is considered as a candidate key of the new schema.
+
+#### Derived Attribute
+When an attribute can be derived from another attribute of the entity set then there is no need to keep the derived attribute in the database unless the derivation involves high computational power. We will cover how it is done during the SQL section.
+
+### Roles
+A role is a function that an entity plays in a relationship that is usually not explicitly specified in the ER diagram but they are useful when a relation set requires clarification.
+<br>
+
+<img src='./Images/ER-role.jpg' alt = 'role of prerequisite relation' width='400px'><br>
+Here, some courses have prerequisite courses which is indicated by the prereq relation in the diagram. The labels course_id and prereq_id are called roles.
 
 https://user-images.githubusercontent.com/84805141/161683285-441db2aa-9472-4f72-94d7-1417a7c150ea.mp4
 
 https://user-images.githubusercontent.com/84805141/161683440-5834d992-6b9b-4192-9005-aa90beeb2162.mp4
 
+## External Resources
+---
+1. [The Entity Relationship diagram](https://www2.cs.sfu.ca/CourseCentral/354/zaiane/material/notes/Chapter2/node8.html)
+2. [Other Styles of ER diagram](https://www2.cs.sfu.ca/CourseCentral/354/zaiane/material/notes/Chapter2/node9.html)
+3. [Reducing ER diagrams to table](https://www2.cs.sfu.ca/CourseCentral/354/zaiane/material/notes/Chapter2/node10.html)
+4. [Representation of Strong Entity set](https://www2.cs.sfu.ca/CourseCentral/354/zaiane/material/notes/Chapter2/node11.html)
+
+- You can redirect from the above links to other content from the same site
+-----
 
 
 [^1]:An Entity is an object that exists and is distinguishable from other objects and is represented by a set of attributes. An entity set is a set of entites of the same type that share the same properties.
