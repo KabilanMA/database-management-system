@@ -77,9 +77,6 @@ A **candidate key** of an entity set is a minimal super key
 - Eg: consider instructor table
   - ID
 
-https://user-images.githubusercontent.com/84805141/161683285-441db2aa-9472-4f72-94d7-1417a7c150ea.mp4
-
-
 <br>
 Although several candidate keys may exist, one of the candidate keys is selected to be the **primary key**
 
@@ -88,7 +85,11 @@ Consider many-to-many relationship set takes between instructor and department, 
 
 ## ER Diagram
 
-<a href="{./Videos/LucideChartPari01.mp4}" title="Link Title"><img src="{../Intruduction/Images/abstraction-heirarchy.JPG}" alt="Alternate Text" /></a>
+https://user-images.githubusercontent.com/84805141/161683285-441db2aa-9472-4f72-94d7-1417a7c150ea.mp4
+
+https://user-images.githubusercontent.com/84805141/161683440-5834d992-6b9b-4192-9005-aa90beeb2162.mp4
+
+
 
 [^1]:An Entity is an object that exists and is distinguishable from other objects and is represented by a set of attributes. An entity set is a set of entites of the same type that share the same properties.
 [^2]:A relationship is an association among several entites. A relationship set is a mathematical relation among n >= 2 entities, each taken from entity sets.
