@@ -6,6 +6,6 @@ Some of the sections contain external sources and also this repository contains 
 Still didn't finish filling up the whole repository.
 
 - [x] Chapter 1 : [Introduction to DBMS](./Content/1-Introduction/introduction.md)
-- [ ] Chapter 2 : [Entity Relationship Model](./Content/2-Entity-Relationship-Model/EntityRelationshipModel.md)
+- [x] Chapter 2 : [Entity Relationship Model](./Content/2-Entity-Relationship-Model/EntityRelationshipModel.md)
 - [ ] Chapter 3 : Normalization Theory
 - [ ] Chapter 4 : SQL (MYSQL)

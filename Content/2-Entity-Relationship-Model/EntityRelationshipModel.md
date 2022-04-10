@@ -125,12 +125,47 @@ A role is a function that an entity plays in a relationship that is usually not 
 <br>
 
 <img src='./Images/ER-role.jpg' alt = 'role of prerequisite relation' width='400px'><br>
-Here, some courses have prerequisite courses which is indicated by the prereq relation in the diagram. The labels **course_id** and **prereq_id** are called roles.
-
+Here, some courses have prerequisite courses which is indicated by the prereq relation in the diagram. The labels **course_id** and **prereq_id** are called roles.<br>
+Check the video below to understand how to draw the ER-diagram in crow's foot notation.
 https://user-images.githubusercontent.com/84805141/161683285-441db2aa-9472-4f72-94d7-1417a7c150ea.mp4
 
 https://user-images.githubusercontent.com/84805141/161683440-5834d992-6b9b-4192-9005-aa90beeb2162.mp4
 
+----
+### Weak Entity Sets
+The entity sets which do not have sufficient attributes to form a primary key are known as weak entity sets and the entity sets which have a primary key are known as strong entity sets.<br>The existence of a weak entity set depends on an **identifying entity set**.<br>The relationship between the two entity set is called **identifying relationship**<br>
+Consider an example;
+- course = {course_id, title, credits} <br> here course_id is the primary key of course entity.
+- section = {course_id, section_id, semester, year, building} <br> here (course_id, section_id, semester, year) is the primary key. <br>
+
+Here course_id is redundant attribute in section entity, but if we remove that, we will not be able to uniquely identify each entity in section entity set. Therefore **section** entity set is called weak entity set and course entity set is called identifying entity set and relationship between course and sction indicates the identifying relationship. <br>Primary key of a weak entity set is formed by the primary key of the identifying entity set and the discriminator[^3] of the weak entity set.
+
+#### Weak Entity Sets Design
+- Identifying relationship is denoted by a double diamond.
+- The dsicriminator of a weak entity set is underlined with a dashed line.
+  
+<img src='./Images/ER-weak-entity.jpg' alt = 'ER of a weak entity' width='400px'><br>
+
+### Extended ER (EER) Feature
+
+The EER model is a high-level data model which incorporates the extension of the ER model. 
+- Specialization
+- Generalization
+- Aggregation
+
+### Specialization
+It is a top-down design process where we designate sub-groupings within an entity set that are distinctive from other entities in the set.<br>This is depicted by a triangle component labeled ISA.<br>A lower-level entity set inherits all the attributes and relationship participation of the higher-level entity set to which it is linked.
+
+### Generalization
+It is a bottom-up process in which the combination of a number of entity sets that share the same features produce a higher-level entity set.<br>Specialization and generalization are simple inversions of each other; they are represented in an ER diagram in the same way. The term specialization and generalization are used interchangeably.
+
+<img src='./Images/EER.jpg' alt = 'Generalization and Specialization' width='400px'><br>
+
+### Aggregation
+
+It represents a relationship between a whole object and its components.
+
+-----
 ## External Resources
 ---
 1. [The Entity Relationship diagram](https://www2.cs.sfu.ca/CourseCentral/354/zaiane/material/notes/Chapter2/node8.html)
@@ -144,3 +179,4 @@ https://user-images.githubusercontent.com/84805141/161683440-5834d992-6b9b-4192-
 
 [^1]:An Entity is an object that exists and is distinguishable from other objects and is represented by a set of attributes. An entity set is a set of entites of the same type that share the same properties.
 [^2]:A relationship is an association among several entites. A relationship set is a mathematical relation among n >= 2 entities, each taken from entity sets.
+[^3]:The set of attributes that allows distingushing among weak entities is called the discriminator or partial key.
