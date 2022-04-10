@@ -104,12 +104,12 @@ There are more constraints that we will see in different conditions.<br>
 
 Consider the above example of the instructor and student entity relationship. In case we need to store the data of when an instructor and student engage in the advisor relation, we can't store them in neither instructor entity set nor in the student entity set, because of the cardinality constraints (one instructor can be in the advisor relation with more than one student and vise versa) and other factors. Therefore, relation set, **advisor** should maintain an attribute, **date**.
 
-<img src='./Images/ER-relation-attribute.jpg' alt = 'Relationship set with attribute' width='400px'><br>
+<img src='./Images/ER-relation-attribute.JPG' alt = 'Relationship set with attribute' width='400px'><br>
 
 ### Complex Attributes
 There are few complex attributes of an entity set which needs to be avoided when designing the ER model.
 <br>
-<img src='./Images/ER-complex-attribute.jpg' alt = 'Complex Attributes of instructor entity' width='500px'><br>
+<img src='./Images/ER-complex-attribute.JPG' alt = 'Complex Attributes of instructor entity' width='500px'><br>
 
 #### Composite Attribute
 Composite attributes are the non-atomic attributes where each component represents a different meaning alone. Therefore these composite attributes can be flattened into several individual component attributes.
@@ -124,9 +124,10 @@ When an attribute can be derived from another attribute of the entity set then 
 A role is a function that an entity plays in a relationship that is usually not explicitly specified in the ER diagram but they are useful when a relation set requires clarification.
 <br>
 
-<img src='./Images/ER-role.jpg' alt = 'role of prerequisite relation' width='400px'><br>
+<img src='./Images/ER-role.JPG' alt = 'role of prerequisite relation' width='400px'><br>
 Here, some courses have prerequisite courses which is indicated by the prereq relation in the diagram. The labels **course_id** and **prereq_id** are called roles.<br>
-Check the video below to understand how to draw the ER-diagram in crow's foot notation.
+Check the video below to understand how to draw the ER-diagram in crow's foot notation.<br>
+
 https://user-images.githubusercontent.com/84805141/161683285-441db2aa-9472-4f72-94d7-1417a7c150ea.mp4
 
 https://user-images.githubusercontent.com/84805141/161683440-5834d992-6b9b-4192-9005-aa90beeb2162.mp4
@@ -144,7 +145,7 @@ Here course_id is redundant attribute in section entity, but if we remove that, 
 - Identifying relationship is denoted by a double diamond.
 - The dsicriminator of a weak entity set is underlined with a dashed line.
   
-<img src='./Images/ER-weak-entity.jpg' alt = 'ER of a weak entity' width='400px'><br>
+<img src='./Images/ER-weak-entity.JPG' alt = 'ER of a weak entity' width='400px'><br>
 
 ### Extended ER (EER) Feature
 
@@ -159,7 +160,7 @@ It is a top-down design process where we designate sub-groupings within an entit
 ### Generalization
 It is a bottom-up process in which the combination of a number of entity sets that share the same features produce a higher-level entity set.<br>Specialization and generalization are simple inversions of each other; they are represented in an ER diagram in the same way. The term specialization and generalization are used interchangeably.
 
-<img src='./Images/EER.jpg' alt = 'Generalization and Specialization' width='400px'><br>
+<img src='./Images/EER.JPG' alt = 'Generalization and Specialization' width='400px'><br>
 
 ### Aggregation
 
