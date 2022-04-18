@@ -1,7 +1,6 @@
 ﻿# Database Management System
  
-I prepared this content as a note while I was studying the Database Management System module in the 2nd year of my Computer Science program. This covers the basic understanding of Database Management and Database Management languages such as MySQL and SQLite (basically covers SQL: widely used database query language).
-Some of the sections contain external sources and also this repository contains the actual lecture content of the module.
+This is a documenting repository of Database Management System
 
 Still didn't finish filling up the whole repository.
 
