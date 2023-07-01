@@ -14,7 +14,7 @@ A database can be modeled as a collection of entities[^1] and relationship[^2] a
 |76543 | Singh |
 | 22222 | Einstein |
 
-#### Student Entitty Set
+#### Student Entity Set
 | sudent_ID | student_name |
 |-----------|--------------|
 | 98988 | Tanaka |
