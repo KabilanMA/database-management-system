@@ -46,13 +46,11 @@ In this Chapter, we will install and start to use MySQL and work a few SQL queri
 - Start the MySQL server by launching the **MySQL** application in the **MySQL** folder in the Applications directory.
 
 ## Connecting to MySQL
-<br>
 
 ### Connecting to MySQL on Windows:
 - Open the MySQL Command Line Client or MySQL Workbench.
 - Enter the root username and the password set during the installation process.
 - Press Enter, and if the credentials are correct, you will be connected to the MySQL server.
-<br>
 
 ### Connecting to MySQL on Linux and macOS
 - Open the terminal and type `mysql -u root -p` to connect to the MySQL server.
@@ -62,11 +60,11 @@ In this Chapter, we will install and start to use MySQL and work a few SQL queri
 ## SQL queries with MySQL
 
 SQL is a very high level language that works well because it is optimized well. We will look at its building structure in the future.
-<br><br>
+<br>
 Since SQL is a language, it has its own syntax and semantics.
-<br><br>
+<br>
 SQL has two distinct categories of commands used to interact with a database; DDL (Data Definition Language) and DML (Data Manipulation Language).
-<br><br>
+<br>
 DDL is used to define and manage database tables, indexes, constraints and other database objects. DDL commands are responsible for creating, modifying, and deleting database objects.
 <br>
 Common DDL commands:
@@ -76,7 +74,7 @@ Common DDL commands:
 - **TRUNCATE**: Deletes all data from a table, but keeps the structure intact.
 - **RENAME**: Renames a database object, such as renaming a table or a column.
 
-<br><br>
+<br>
 DML is used to manipulate or interact with the data stored in the database. DML commands are responsible for inserting, updating, and deleting data in the database.
 <br>
 Common DML commands:
@@ -85,19 +83,19 @@ Common DML commands:
 - **UPDATE**: Modifies existing data in a table.
 - **DELETE**: Removes data from a table.
 
-<br><br>
+<br>
 
 ### Data Types in SQL
 
 <br>
 
-1. char(n) : Fixed length character string, with user-specified length n.
-2. varchar(n) : Variable length character strings, with user-specified maximum length n.
-3. int : Integer
-4. smallint : Small integer
-5. numeric(p,d) : Fixed point number, with user-specified precision of *p* digits, with *d* digits to the right of decimal point.
-6. real, double precision : Floating point and double-precision floating point numbers, with machine-dependent precision.
-7. float(n) : Floating point number, with user-specified precision of at least n digits.
-<br><br>
+1. *char(n)* : Fixed length character string, with user-specified length *n*.
+2. *varchar(n)* : Variable length character strings, with user-specified maximum length *n*.
+3. *int* : Integer
+4. *smallint* : Small integer
+5. *numeric(p,d)* : Fixed point number, with user-specified precision of *p* digits, with *d* digits to the right of decimal point.
+6. *real*, *double precision* : Floating point and double-precision floating point numbers, with machine-dependent precision.
+7. *float(n)* : Floating point number, with user-specified precision of at least *n* digits.
+<br>
 
-### sd
+### Queries
